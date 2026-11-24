@@ -1,0 +1,154 @@
+:root {
+  --plum: #2d1b3d;
+  --coral: #ff6b6b;
+  --coral-dark: #e85555;
+  --cream: #fff4e6;
+  --white: #ffffff;
+  --text: #3b2a4a;
+  --soft: #f6e3d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--plum);
+  color: var(--cream);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+/* Main area */
+.weather {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 16px;
+}
+
+/* Search */
+.search-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--soft);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: var(--coral);
+}
+
+.search-form button {
+  padding: 12px 20px;
+  background-color: var(--coral);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: var(--coral-dark);
+}
+
+/* Messages */
+.message {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.loading {
+  background-color: var(--soft);
+  color: var(--plum);
+}
+
+.error {
+  background-color: #ffdede;
+  color: #b3261e;
+}
+
+/* Weather card */
+.weather-card {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(45, 27, 61, 0.15);
+}
+
+.weather-card h2 {
+  color: var(--plum);
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--coral);
+}
+
+.condition {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-box {
+  flex: 1;
+  background-color: var(--soft);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--plum);
+  color: var(--cream);
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .details {
+    flex-direction: column;
+  }
+}
