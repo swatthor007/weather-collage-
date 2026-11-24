@@ -9,3 +9,4 @@ Uses the free Open-Meteo API (no API key needed).
    npm run dev
 
 3. Open the link shown in the terminal (usually http://localhost:5173)
+# weather-collage-
